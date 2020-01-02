@@ -1,12 +1,157 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="fr">
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+    <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="/images/Youtube_23392.ico"/>
+        <link rel="stylesheet" href="css/styles.css">
+
+        <title> {% block title %}YouTube{% endblock %}</title>
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <a class="navbar-brand" href="#"><img class="img-logo-ytb"src="/images/ytb.png"> YouTube</a>
+            <form class="form-inline search-video" >
+                <input class="form-control mr-sm-0" type="search" placeholder="Rechercher" aria-label="Search">
+                <button class="btn btn-dark" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <div class="user-actions-icons ml-5">
+                <button><i class="fa fa-camera mr-3"></i></button>
+               <button> <i class="fa fa-th mr-3"></i></button>
+                <button><i class="fa fa-ellipsis-v mr-3"></i></button>
+
+            </div>
+            <button class="btn btn-outline-primary btn-connexion"><i class="fa fa-user mr-2"></i> Se connecter</button>
+
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <nav class=" col-2 d-none d-md-block sidebar mt-5 sidebar-main" style="padding-left: 0;padding-right: 0">
+                    <div class="sidebar-sticky sticky-top sticky-offset">
+                        <ul class="nav flex-column" style="width: 100%">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('home') }}" id="accueil-a">
+                                    <i class="fa fa-home mr-3"></i> Accueil
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href={{ path('trend') }} id="tendances-a">
+                                    <i class="fa fa-fire mr-3"></i> Tendances
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ path('subscriber') }}" id="abo-a">
+                                    <i class="fa fa-users mr-3"></i> Abonnements
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-folder mr-3"></i> Bibliothèques
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-history mr-3"></i> Historique
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <div class="nav flex-column no-user-logged">
+                            <p class="ml-3">Connectez-vous à YouTube pour cliquer sur "J'aime", ajouter un commentaire et vous abonner.</p>
+                            <button class="btn btn-outline-primary mt-2 ml-3"><i class="fa fa-user mr-2"></i> Se connecter</button>
+                        </div>
+                        <hr>
+                        <p class="ml-3">Le meilleur de Youtube</p>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-music mr-3"></i> Musique
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-soccer-ball-o mr-3"></i> Sport
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-gamepad mr-3"></i> Jeux vidéos
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-file-movie-o mr-3"></i> Films
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-file-movie-o mr-3"></i> Emissions
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-newspaper-o mr-3"></i> Actualités
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-bluetooth mr-3"></i> En direct
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+
+                        <p class="ml-3"><i class="fa fa-plus-circle mr-3"></i> Parcourir les chaînes</p>
+                        <hr>
+                        <p class="ml-3">Autres contenus YouTube</p>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-youtube mr-3"></i> YouTube Premium
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-soccer-ball-o mr-3"></i> En direct
+                                </a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-cog mr-3"></i> Paramètres
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-flag mr-3"></i> Signalements
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="fa fa-question-circle-o mr-3"></i> Aide
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>

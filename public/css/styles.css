@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    background-color: #1F1F1F;
+}
+
+a.navbar-brand {
+    color: white;
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+nav {
+    background-color: #282828;
+}
+
+.sidebar-main  a:hover{
+    background-color: grey;
+    opacity: 0.75;
+}
+
+
+
+.sidebar-main  .actived {
+    background-color: grey;
+    opacity: 0.75;
+    width: 100%;
+}
+
+.sticky-offset {
+    top: 56px;
+}
+
+.recommandations-text {
+    color: white;
+}
+
+.user-actions-icons button {
+    background-color: transparent;
+    border:none;
+}
+
+.btn-connexion i {
+    color: #007BFF;
+}
+
+.card-img-user-account {
+    border-radius: 50px;
+    width: 36px;
+    height: 36px;
+    float: left;
+}
+
+.card-title {
+    font-size: small;
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: small;
+}
+
+.videos-card>.col-4>a {
+    text-decoration: none;
+}
+
+form.search-video input[type=search] {
+    margin-left: 250px;
+    background-color: #121212;
+    border: 1.23px solid #303030;
+    border-radius: 0 2px 2px 0;
+    width: 575px;
+    height: 32px;
+
+}
+
+form.search-video button {
+    width: 65px;
+    height: 32px;
+    margin-left: 0;
+    border-radius: 0 2px 2px 0;
+    border: 1.23px solid #303030;
+    background-color: #393939;
+
+}
+
+.username {
+    margin-bottom: 0;
+}
+
+form.search-video button > i{
+    text-align: center;
+    justify-content: center;
+    top:0;
+
+
+}
+
+
+ a.nav-link {
+    color: white;
+}
+
+i {
+    color : #909090;
+}
+
+hr {
+    background-color : #909090;
+
+}
+
+p {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.card {
+    margin-top: 30px;
+    border: none;
+    width: 275px;
+}
+
+.img-logo-ytb {
+    width: 25px;
+    height: 24px;
+}
+
+.card-img-top {
+    width: 275px;
+    height: 155px;
+}
+.card-body {
+    background-color: #1F1F1F;
+    justify-content: left;
+    width: 275px;
+
+}
+
+h6 {
+    color: white;
+}
+
+
+
+.no-user-logged i.fa-user {
+    color: #007BFF;
+}
+
+.no-user-logged button {
+    width: 200px;
+}
+
